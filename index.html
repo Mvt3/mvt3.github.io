@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Ciencia de Datos</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Uso de awesome--> -
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Sección de bienvenida -->
+    <section id="welcome" class="welcome-section">
+        <div class="welcome-content">
+            <h1>Bienvenido a mi portafolio</h1>
+            <h2>Ciencia de Datos & Análisis</h2>
+            <div class="scroll-indicator">
+                <p>Scroll para explorar</p>
+                <i class="fas fa-chevron-down bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- barra de navegación -->
+    <nav id="navbar" class="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+                <a href="#welcome">Mauro Valenzuela Tobar</a>
+            </div>
+            <div class="nav-links">
+                <a href="#about">Sobre mí</a>
+                <a href="#portfolio">Portafolio</a>
+                <a href="#contact">Contacto</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/mauro-valenzuela-tobar" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Mvt3" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://kaggle.com/maurovt/code" target="_blank" aria-label="Kaggle">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="main-container">
+        <!-- Sección oabout me -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2>Sobre mí</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="yo.jpg" alt="Mauro Valenzela Tobar">
+                </div>
+                <div class="about-text">
+                    <p>Tengo 25 años y me titulé como ingeniero de ejecución informática con un fuerte interés en el campo del Data Science. Me apasiona descubrir patrones en los datos y convertirlos en conocimiento útil mediante técnicas como análisis estadístico, machine learning y visualización de datos.
+                        He dedicado tiempo a formarme en herramientas como Python, SQL, Pandas, scikit-learn y Power BI, además de familiarizarme con conceptos de cloud computing y big data.
+                        Me considero una persona proactiva, curiosa, con orientación al trabajo en equipo y muchas ganas de seguir aprendiendo y asumir nuevos desafíos en tecnología y ciencia de datos.</p>
+                    
+                    <div class="skills-container">
+                        <h3>Habilidades técnicas</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">Python</div>
+                            <div class="skill-item">SQL</div>
+                            <div class="skill-item">Power BI</div>
+                            <div class="skill-item">Machine Learning</div>
+                            <div class="skill-item">Deep Learning</div>
+                            <div class="skill-item">Visualización de Datos</div>
+                            <div class="skill-item">Estadística</div>
+                            <div class="skill-item">Big Data</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección proyectoss    -->
+        <section id="portfolio" class="section">
+            <div class="section-header">
+                <h2>Portafolio</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Pr 1 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <a href="https://www.kaggle.com/code/maurovt/sales-forecasting-with-temporal-fusion-transformer" target="_blank">
+                            <img src="proyecto1.jpg" alt="Proyecto 1">
+                            <div class="portfolio-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Análisis predictivo de ventas (Forecasting)</h3>
+                        <p>Desarrollo de un modelo de aprendizaje profundo basado en la arquitectura Temporal Fusion Transformer para predecir las ventas semanales de Walmart.</p>
+                        <div class="portfolio-tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>pytorch_forecasting</span>
+                            <span>Kaggle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pr 2 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <a href="https://www.kaggle.com/code/maurovt/engagement-classification-model" target="_blank">
+                            <img src="proyecto2.jpg" alt="Proyecto 2">
+                            <div class="portfolio-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Clasificación de engagement en redes sociales</h3>
+                        <p>Desarrollo de un modelo predictivo de clasificación para anticipar el nivel de engagement median un algoritmo de random forest.</p>
+                        <div class="portfolio-tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>scikit-learn</span>
+                            <span>Kaggle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pr 3 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <a href="https://sales-dashboard-withrf.streamlit.app" target="_blank">
+                            <img src="proyecto3.jpg" alt="Proyecto 3">
+                            <div class="portfolio-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Dashboard interactivo de ventas</h3>
+                        <p>Desarrollo de una aplicación para visualizar y analizar datos los datos de ventas, como también predecir valores futuros mediante random forest.</p>
+                        <div class="portfolio-tags">
+                            <span>Python</span>
+                            <span>streamlit</span>
+                            <span>scikit-learn</span>
+                            <span>plotly</span>
+                            <a href="https://github.com/Mvt3/Streamlit-sales-dashboard" target="_blank"><span>Repositorio github</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pr 4 -->
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <a href="dashboard.html" target="_blank">
+                            <img src="proyecto4.jpg" alt="Proyecto 4">
+                            <div class="portfolio-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Dashboard Power Bi</h3>
+                        <p>Creación de un dashboard interactivo para visualizar KPIs de negocio y tendencias temporales.</p>
+                        <div class="portfolio-tags">
+                            <span>Visualización</span>
+                            <span>Power BI</span>
+                            <span>Dataset de pruebas</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px; font-size: 1.1rem;">
+        Para ver más proyectos y notebooks visita mi perfil de Kaggle 👉 
+        <a href="https://www.kaggle.com/maurovt" target="_blank" style="font-weight: bold; color: #007bff;">@maurovt</a>
+        </section>
+
+        <!-- Sección contacto -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2>Contacto</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Actualmente busco nuevas oportunidades profesionales. Si crees que mi perfil encaja contigo o tu empresa, estaré encantado de conversar.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:mauro.valenzuelatobar@gmail.com">mauro.valenzuelatobar@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                             <span>+56 9 7136 2581</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Santiago(RM), Chile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                        <div id="form-status" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        
+</div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Mauro Valenzela Tobar</p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/mauro-valenzuela-tobar" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Mvt3" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://kaggle.com/maurovt/code" target="_blank" aria-label="Kaggle">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
