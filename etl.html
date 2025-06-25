@@ -1,0 +1,154 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio ETL Dashboard</title>
+    <link rel="stylesheet" href="style_etl.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+</head>
+<body>
+    <div class="container">
+        <!-- Título proyecto -->
+        <h1>Proyecto ETL - Análisis de datos</h1>
+
+        <!-- Workflow ETL -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Workflow ETL</h2>
+            <p class="section-description">Diagrama completo del proceso ETL de datos implementado en el proyecto.</p>
+            <div class="workflow-container">
+                <img src="ETL.JPG" alt="Workflow ETL" class="workflow-image">
+            </div>
+        </div>
+
+        <!-- Fuente de datos (MongoDB) -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Fuente de datos - MongoDB</h2>
+            <p class="section-description">Dataset original almacenado en MongoDB. Haz clic en la imagen para acceder al dataset.</p>
+            <div class="mongodb-container">
+                <a href="https://www.mongodb.com/docs/atlas/sample-data/sample-analytics/" class="mongodb-link" target="_blank">
+                    <img src="mongodb_original_wordmark_logo_icon_146425.png" alt="MongoDB Logo" class="mongodb-logo">
+                </a>
+            </div>
+        </div>
+
+        <!-- Estructura de la RDB -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Estructura de la base de datos relacional (warehouse)</h2>
+            <div class="rdb-gallery">
+                <div class="rdb-container">
+                    <img src="diagram1.JPG" alt="Diagrama ER" class="rdb-image">
+                </div>
+                <div class="rdb-container">
+                    <img src="diagram2.JPG" alt="Relaciones entre Tablas" class="rdb-image">
+                </div>
+            </div>
+            <p class="section-description">Diseño de la base de datos relacional resultante basado en un modelado dimensional (Kimball) , incluyendo el diagrama entidad-relación y las relaciones entre tablas implementadas para optimizar las consultas OLAP
+                 y mantener la integridad de los datos.</p>
+        </div>
+
+        <!-- Código Python ETL -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Código Python ETL</h2>
+            <p class="section-description">Implementación del proceso ETL dividido en módulos especializados:</p>
+            <div class="python-gallery">
+                <a href = "https://github.com/Mvt3/ETL-json-to-rdbs-/blob/main/src/functions.py" target="_blank"><div class="python-container">
+                    <img src="file_type_python_icon_130221 (1).png" alt="Functions.py" class="python-image">
+                    <div class="python-description">
+                        <strong>functions.py</strong><br>
+                        Funciones de transformación y validación de datos
+                    </div></a>
+                </div>
+                <a href="https://github.com/Mvt3/ETL-json-to-rdbs-/blob/main/src/connection_db.py" target="_blank"> <div class="python-container">
+                    <img src="file_type_python_icon_130221 (1).png" alt="Connection DB" class="python-image">
+                    <div class="python-description">
+                        <strong>connection_db.py</strong><br>
+                        Gestión de conexiones a DB Browser (SQlite)
+                    </div></a>
+                </div>
+                <a href="https://github.com/Mvt3/ETL-json-to-rdbs-/blob/main/src/main.py" target="_blank"><div class="python-container">
+                    <img src="file_type_python_icon_130221 (1).png" alt="Main.py" class="python-image">
+                    <div class="python-description">
+                        <strong>main.py</strong><br>
+                        Orquestación del proceso ETL completo
+                    </div></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- tablas -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Tablas creadas por el ETL en DB Browser</h2>
+            <div class="extra-container">
+                <img src="tablas.JPG" alt="Análisis Extra" class="extra-image">
+                <div class="extra-description">
+                    El resultado final del proceso ETL se almacena en la base de datos relacional, permitiendo realizar análisis avanzados y visualizaciones de datos.
+                </div>
+            </div>
+        </div>
+
+        <!-- Consultas SQL -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Consultas SQL y Resultados</h2>
+            <p class="section-description">Ejemplos de consultas implementadas para extraer insights de los datos transformados:</p>
+            
+            <div class="sql-container">
+                <img src="sql1.JPG" alt="Consulta SQL 1" class="sql-image">
+                <div class="sql-description">
+                    <strong>Consulta N°1:</strong> ¿Cuál es el promedio, mínimo, máximo y desviación estándar del límite de las cuentas de usuarios? 
+            
+                </div>
+            </div>    
+
+            <div class="sql-container">
+                <img src="sql2.JPG" alt="Consulta SQL 2" class="sql-image">
+                <div class="sql-description">
+                    <strong>Consulta N°2:</strong> ¿Cuál es el usuario del cliente cuya cuenta tiene entre 10 y 20 transacciones de tipo “buy”, y que presenta el 
+                    promedio de inversión más alto por operación de este tipo? 
+                </div>
+            </div>
+
+
+            <div class="sql-container">
+                <img src="sql3.JPG" alt="Consulta SQL 3" class="sql-image">
+                <div class="sql-description">
+                    <strong>Coonsulta N°3:</strong> ¿Qué día de la semana se realizan más transacciones de tipo "buy"?
+                </div>
+            </div>
+
+
+        <!-- Repositorio GitHub -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Código fuente</h2>
+            <p class="section-description">Accede al repositorio completo del proyecto en GitHub:</p>
+            <div class="github-container">
+                <a href="https://github.com/Mvt3/ETL-json-to-rdbs-" class="github-link" target="_blank">
+                    <img src="github_original_wordmark_logo_icon_146506.png" alt="GitHub Logo" class="github-logo">
+                </a>
+            </div>
+            <p class="section-description">Este proyecto ETL fue desarrollado sin el uso de herramientas especializadas de orquestación 
+                como Apache Airflow, Luigi o Prefect, ni librerías ETL de alto nivel como Bonobo o Petl. Con la intención de  
+                mantener la simplicidad del flujo para enfocarse en la lógica de transformación, manipulación de datos con Python puro (pandas) 
+                y su posterior carga en una base de datos relacional (SQLite)</p>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Mauro Valenzuela Tobar</p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/mauro-valenzuela-tobar" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Mvt3" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://kaggle.com/maurovt/code" target="_blank" aria-label="Kaggle">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

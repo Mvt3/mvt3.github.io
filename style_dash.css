@@ -133,6 +133,37 @@ h1 {
     margin-bottom: 8px;
 }
 
+.footer {
+    background-color: var(--secondary-color);
+    padding: 30px 0;
+    text-align: center;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.footer p {
+    margin-bottom: 15px;
+    color: var(--light-text);
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-social a {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    transition: all var(--transition-speed) ease;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
 
 @media (max-width: 768px) {
     .container {
