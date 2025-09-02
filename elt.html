@@ -1,0 +1,149 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio ETL Dashboard</title>
+    <link rel="stylesheet" href="style_elt.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+</head>
+<body>
+    <div class="container">
+        <!-- Título proyecto -->
+        <h1>Proyecto ELT - Dashboard</h1>
+
+        <!-- Workflow ELT -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Workflow ELT</h2>
+            <p class="section-description">Diagrama completo del proceso ELT implementado en el proyecto.</p>
+            <div class="workflow-container">
+                <img src="/elt-proyecto/ELT netflix.drawio.png" alt="Workflow ELT" class="workflow-image">
+            </div>
+        </div>
+
+        <!-- Fuente de datos (Grouplens) -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Fuente de datos - Grouplens</h2>
+            <p class="section-description">Dataset original almacenado en Grouplens. Haz clic en la imagen para acceder al dataset.</p>
+            <div class="grouplens-container">
+                <a href="https://grouplens.org/datasets/movielens/20m/" class="grouplens-link" target="_blank">
+                    <img src="/elt-proyecto/5495590.png" alt="grouplens Logo" class="grouplens-logo">
+                </a>
+            </div>
+        </div>
+
+        <!-- Estructura de la RDB -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Estructura de la base de datos relacional (warehouse)</h2>
+            <div class="rdb-gallery">
+                <div class="rdb-container">
+                    <img src="/elt-proyecto/diagram1db.JPG" alt="Diagrama ER" class="rdb-image">
+                </div>
+                <div class="rdb-container">
+                    <img src="/elt-proyecto/diagram2db.JPG" alt="Relaciones entre Tablas" class="rdb-image">
+                </div>
+            </div>
+            <p class="section-description">La base de datos se diseñó siguiendo el modelo en estrella (star schema), optimizado para consultas analíticas (OLAP) sobre datos de películas, usuarios y tags.
+
+Tablas de hechos:
+<b> fct_ratings:</b> Contiene las calificaciones de los usuarios para cada película, con timestamp asociado.
+<b> fct_genome_scores:</b> Registra la relevancia de cada tag para cada película.
+Tablas de dimensiones:
+<b> dim_movies:</b> Información descriptiva de películas y sus géneros.
+<b> dim_genome_tags:</b> Detalle de tags asociados a películas.
+<b> dim_users:</b> Identificadores y atributos de los usuarios.</p>
+
+        </div>
+
+        <!-- Código Python ETL -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Código del ELT</h2>
+            <p class="section-description">Implementación del proceso ELT dividido en módulos especializados:</p>
+            <div class="python-gallery">
+                <a href = "https://github.com/Mvt3/ELT-DBT-SNOW/blob/main/main.py" target="_blank"><div class="python-container">
+                    <img src="file_type_python_icon_130221 (1).png" alt="main.py" class="python-image">
+                    <div class="python-description">
+                        <strong>main.py</strong><br>
+                        Orquestación del proceso ETL completo, 
+                    </div></a>
+                </div>
+                <a href="https://github.com/Mvt3/ELT-DBT-SNOW/blob/main/main.tf" target="_blank"> <div class="python-container">
+                    <img src="/elt-proyecto/terraform.png" alt="terraform" class="python-image">
+                    <div class="python-description">
+                        <strong>main.tf</strong><br>
+                        Creador de la infraestructura en la nube (AWS) solo un S3
+                    </div></a>
+                </div>
+                
+                </div>
+        </div>
+
+        <!-- tablas -->
+      <div class="dashboard-section">
+    <h2 class="section-title">Tablas creadas en Snowflake separadas por ambiente dev y prod</h2>
+    
+    <div class="snowflake-gallery">
+        <div class="snowflake-container">
+            <img src="/elt-proyecto/dev.JPG" alt="Ambiente Dev" class="snowflake-image">
+            <div class="snowflake-description">
+                <strong>Ambiente DEV:</strong> Tablas de desarrollo para pruebas y validación del proceso ELT. Separadas en vista y tablas.
+            </div>
+        </div>
+        
+        <div class="snowflake-container">
+            <img src="/elt-proyecto/prod.JPG" alt="Ambiente Prod" class="snowflake-image">
+            <div class="snowflake-description">
+                <strong>Ambiente PROD:</strong> Tablas de producción con datos finales para análisis y visualizaciones. Ya pasaron las pruebas.
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Dashboard -->
+        <div class="dashboard-section">
+            <h2 class="section-title">Dashboard</h2>
+            <p class="section-description">Dashboard resultante listo para consumir datos del prod</p>
+            
+            <div class="sql-container">
+                <img src="/elt-proyecto/dashboard.JPG" alt="Consulta SQL 1" class="sql-image">
+                <div class="sql-description">
+                     Los datos estarán listos para realizar todo tipo de análisis, ya sea sobre los ratings de las películas mejor o peor calificadas, segmentación de usuarios, análisis de series temporales, entre otros.
+                    Además, podrán utilizarse en otras herramientas de visualización como Power BI, Tableau, etc.
+            
+                </div>
+            </div>    
+
+            <!-- Repositorio GitHub -->
+            <div class="dashboard-section">
+                <h2 class="section-title">Código fuente</h2>
+                <p class="section-description">Accede al repositorio completo del proyecto en GitHub:</p>
+                <div class="github-container">
+                <a href="https://github.com/Mvt3/ELT-DBT-SNOW/tree/main" class="github-link" target="_blank">
+                    <img src="github_original_wordmark_logo_icon_146506.png" alt="GitHub Logo" class="github-logo">
+                </a>
+            </div>
+            <p class="section-description">Este proyecto ETL fue desarrollado sin el uso de herramientas especializadas de orquestación como Apache Airflow, Luigi o Prefect, ni librerías ETL de alto nivel.
+El flujo de extracción, transformación y carga se implementó utilizando Snowflake y dbt, incluyendo pruebas de calidad de los datos para asegurar su consistencia e integridad.
+Cabe destacar que el dashboard incluido no está tan elaborado, ya que la finalidad principal del proyecto era procesar y preparar los datos para análisis, no crear visualizaciones avanzadas.</p>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Mauro Valenzuela Tobar</p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/mauro-valenzuela-tobar" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Mvt3" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://kaggle.com/maurovt/code" target="_blank" aria-label="Kaggle">
+                    <i class="fab fa-kaggle"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
